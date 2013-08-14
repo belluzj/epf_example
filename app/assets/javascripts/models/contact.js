@@ -8,6 +8,7 @@ App.Contact  = Ep.Model.extend({
   notes:        Ep.attr('string'),
   group:        Ep.belongsTo(App.Group),
   phoneNumbers: Ep.hasMany(App.PhoneNumber),
+  emergencyPhoneNumber: Ep.belongsTo(App.PhoneNumber),
 
   fullName: function() {
     var firstName = this.get('firstName'),

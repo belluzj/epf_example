@@ -40,6 +40,9 @@ App.ContactsNewController = Em.ObjectController.extend({
   removePhoneNumber: function(phoneNumber) {
     contact = this.get('model');
     contact.session.deleteModel(phoneNumber);
-  }
+  },
 
+  setEmergencyNumber: function (phoneNumber) {
+    this.set('emergencyPhoneNumber', phoneNumber);
+  },
 });

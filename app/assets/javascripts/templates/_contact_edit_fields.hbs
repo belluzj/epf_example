@@ -38,10 +38,11 @@
 <div class="control-group">
   <label class="control-label" for="phone">Phone</label>
   <div class="controls">
-    {{#each phoneNumbers}}
+    {{#each phoneNumbers itemController="phoneNumber"}}
       <div class="phone-number">
         {{view Ember.TextField valueBinding="number" placeholder="Number"}}
         <a class="btn" {{action removePhoneNumber this}}><i class="icon-minus-sign"></i> Remove</a>
+        <label {{action setEmergencyNumber this}}><input type="radio" {{bindAttr checked=isEmergencyNumber}}>Emergency number</label>
       </div>
     {{/each}}
     <a class="btn" {{action addPhoneNumber}}><i class="icon-plus-sign"></i> Add a phone number</a>

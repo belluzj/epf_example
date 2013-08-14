@@ -30,5 +30,10 @@ App.ContactEditController = Em.ObjectController.extend({
 
   removePhoneNumber: function(phoneNumber) {
     this.session.deleteModel(phoneNumber);
-  }
+  },
+
+  setEmergencyNumber: function (phoneNumber) {
+    this.set('emergencyPhoneNumber', phoneNumber);
+  },
+
 });

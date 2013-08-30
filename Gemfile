@@ -19,7 +19,8 @@ gem 'ember-source', '1.0.0.rc6'
 gem 'handlebars-source', '1.0.0.rc4'
 
 gem 'epf-rails'
-gem 'epf-source'
+# Try the repo with my pull request, it works
+gem 'epf-source' #, github: "belluzj/epf"
 
 group :production do
   gem 'pg'
